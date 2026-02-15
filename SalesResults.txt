@@ -1,4 +1,4 @@
 Sales Computation Results
 -------------------------
-Total Sales Cost: $167.25
-Time Elapsed: 0.000371 seconds
+Total Sales Cost: $165,235.37
+Time Elapsed: 0.001133 seconds
