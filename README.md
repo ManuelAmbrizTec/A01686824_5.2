@@ -6,6 +6,7 @@ This program, `computeSales.py`, calculates the total cost of sales based on a p
 ## Prerequisites
 - Python 3.x installed.
 - No external libraries required (uses standard `sys`, `json`, `time`).
+- `flake8` and `pylint` for code quality checks.
 
 ## Usage
 Run the program from the command line by providing the path to the price catalogue JSON file and the sales record JSON file as arguments:
@@ -14,7 +15,17 @@ Run the program from the command line by providing the path to the price catalog
 python computeSales.py priceCatalogue.json salesRecord.json
 ```
 
-## Test Cases Execution
+## Programa 1. Análisis de Errores de Pylint – PEP 8
+The code adheres to PEP 8 standards and passes Pylint checks with a score of 10.00/10.
+
+![Evidence](Evidence.png)
+
+## Programa 1. Análisis de Errores de Flake
+The code has been checked with Flake8 and contains no errors.
+
+![Evidence](Evidence.png)
+
+## Programa 3. Correcta Ejecución de Casos de Prueba
 The following test cases (TC1, TC2, TC3) demonstrate the correct execution of the program with different datasets.
 
 ### Test Case 1 (TC1)
