@@ -1,9 +1,25 @@
+"""
+This module computes the total cost of sales based on a price catalogue
+and a sales record. It accepts two JSON files as input, handles errors,
+and outputs the results to the console and a file.
+"""
+# pylint: disable=invalid-name
+
 import sys
 import json
 import time
 
 
 def load_json_file(filename):
+    """
+    Loads data from a JSON file.
+
+    Args:
+        filename (str): The path to the JSON file.
+
+    Returns:
+        list/dict: The data loaded from the JSON file, or None if error.
+    """
     try:
         with open(filename, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -19,7 +35,15 @@ def load_json_file(filename):
 
 
 def create_price_map(catalogue):
+    """
+    Creates a dictionary mapping product titles to prices.
 
+    Args:
+        catalogue (list): List of product dictionaries.
+
+    Returns:
+        dict: A dictionary with product titles as keys and prices as values.
+    """
     price_map = {}
     if not isinstance(catalogue, list):
         print("Error: Invalid catalogue format. Expected a list.")
@@ -34,7 +58,16 @@ def create_price_map(catalogue):
 
 
 def compute_total_sales(price_map, sales_record):
+    """
+    Computes the total cost of sales.
 
+    Args:
+        price_map (dict): Dictionary of product prices.
+        sales_record (list): List of sales records.
+
+    Returns:
+        float: The total cost of all sales.
+    """
     total_cost = 0.0
 
     if not isinstance(sales_record, list):
@@ -68,7 +101,9 @@ def compute_total_sales(price_map, sales_record):
 
 
 def main():
-
+    """
+    Main function to execute the sales computation.
+    """
     start_time = time.time()
 
     if len(sys.argv) != 3:
